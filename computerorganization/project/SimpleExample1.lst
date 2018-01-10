@@ -1,0 +1,24 @@
+     Assembly listing for: SimpleExample1.mas
+                Assembled: Tue Jun 13 06:45:44 EDT 2017
+
+         |                          		
+000 1004 |         LOAD X            
+001 3005 |         ADD Y             
+002 2006 |         STORE Z           
+003 7000 |         HALT              
+004 0001 |  X      DEC 1             
+005 0002 |  Y      DEC 2             
+006 0111 |  Z      HEX 111           
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          X      |   004   | 000
+          Y      |   005   | 001
+          Z      |   006   | 002
+         --------------------------------------------------
+
+

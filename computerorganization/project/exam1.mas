@@ -1,0 +1,7 @@
+Load	X
+Add	Y
+Store	Z
+Halt
+X,	Dec	1
+Y,	Dec	2
+Z,	Hex	111

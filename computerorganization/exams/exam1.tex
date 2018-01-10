@@ -1,0 +1,97 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{listings}
+
+\newcommand{\class}{Advanced Computer Architecture }
+\newcommand{\term}{Summer 2017}
+\newcommand{\examnum}{Exam 1}
+\newcommand{\examdate}{06/20/2017}
+\newcommand{\timelimit}{1 day}
+%\newcommand{\numquestions}{5}
+%\newcommand{\numpoints}{100}
+%\newcommand{\numpages}{2}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions.\\
+
+\textbf{Instructions}
+\begin{enumerate}
+\item \textit{Read every question very carefully.}
+\item \textit{You should be able to finish this exam in an hour.}
+\item \textit{For descriptive questions, please complete the answer in 5-10 sentences.}
+\item \textit{Please try to submit soft copies. If you are planning to submit scanned copies of hand-written answers, please make sure they are very clear.}
+\item \textit{Total points for the exam is \numpoints.}
+\end{enumerate}
+
+\begin{center}
+Grade Table (for teacher use only)\\
+\addpoints
+\gradetable[v][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\newpage
+\begin{questions}
+
+\question[20] Explain the von Neumann architecture with a clear diagram.
+\addpoints
+
+\question[20] Explain how the set associative cache scheme combine the advantages of direct mapped cache and fully associative cache.
+\addpoints
+
+\question [20] Perform the following operations.
+\noaddpoints % to omit double points count
+\begin{parts}
+\part[5] Convert $1234$ to binary
+\part[5] Convert $1011010_2$ to decimal
+\part[5] Convert $1010101010101010_2$ to hexadecimal
+\part[5] Convert $101101101101_2$ to octal
+\end{parts}
+\addpoints
+
+
+\question [20] What are the DECIMAL values of the following registers in a MARIE computer after executing the selected line in the code given below.
+\noaddpoints % to omit double points count
+\begin{lstlisting}
+Load	X 
+Add	Y 
+Store 	Z /AFTER EXECUTING THIS LINE 
+Halt
+X,	Dec	1
+Y,	Dec	2
+Z,	Hex 	111
+\end{lstlisting}
+\begin{parts}
+\part[5] AC
+\part[5] IR
+\part[5] PC
+\part[5] MBR
+\end{parts}
+\addpoints
+
+\question [20] Describe some of the challenges in designing an ISA.
+\end{questions}
+
+\end{document}
+

@@ -1,0 +1,50 @@
+     Assembly listing for: Ex4_1.mas
+                Assembled: Tue Jun 13 06:32:55 EDT 2017
+
+         |         ORG 100          / Example 4.1
+100 1112 |         LOAD Addr        /Load address of first number to be added	
+101 3117 |         ADD One           
+102 2113 |         STORE Next       /Store this address is our Next pointer		
+103 1114 |         LOAD Num         /Load the number of items to be added		
+104 2116 |         STORE Ctr        /Store this value in Ctr to control looping		
+105 1115 |  Loop   LOAD Sum         /Load the Sum into AC		
+106 B113 |         ADDI Next        /Add the value pointed to by location Next		
+107 2115 |         STORE Sum        /Store this sum		
+108 1113 |         LOAD Next        /Load Next		
+109 3117 |         ADD One          /Increment by one to point to next address		
+10A 2113 |         STORE Next       /Store in our pointer Next		
+10B 1116 |         LOAD Ctr         /Load the loop control variable		
+10C 4117 |         SUBT One         /Subtract one from the loop control variable		
+10D 2116 |         STORE Ctr        /Store this new value in loop control variable		
+10E 8000 |         SKIPCOND 000     /If control variable < 0, skip next instruction		
+10F 9105 |         JUMP Loop        /Otherwise, go to Loop		
+110 1115 |         LOAD Sum          
+111 7000 |         HALT             /Terminate program	
+112 0117 |  Addr   HEX 117          /Numbers to be summed start at location 118		
+113 0000 |  Next   HEX 0            /A pointer to the next number to add		
+114 0005 |  Num    DEC 5            /The number of values to add 		
+115 0000 |  Sum    DEC 0            /The sum		
+116 0000 |  Ctr    HEX 0            /The loop control variable		
+117 0001 |  One    DEC 1            /Used to increment and decrement by 1		
+118 000A |         DEC 10           /The values to be added together		
+119 000F |         DEC 15            
+11A 0014 |         DEC 20            
+11B 0019 |         DEC 25            
+11C 001E |         DEC 30            
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          Addr   |   112   | 100
+          Ctr    |   116   | 104, 10B, 10D
+          Loop   |   105   | 10F
+          Next   |   113   | 102, 106, 108, 10A
+          Num    |   114   | 103
+          One    |   117   | 101, 109, 10C
+          Sum    |   115   | 105, 107, 110
+         --------------------------------------------------
+
+

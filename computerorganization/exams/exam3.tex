@@ -1,0 +1,104 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{listings}
+
+\newcommand{\class}{Advanced Computer Architecture }
+\newcommand{\term}{Summer 2017}
+\newcommand{\examnum}{Exam 3}
+\newcommand{\examdate}{07/21/2017}
+\newcommand{\timelimit}{07/25/2017}
+%\newcommand{\numquestions}{5}
+%\newcommand{\numpoints}{100}
+%\newcommand{\numpages}{2}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions.\\
+
+\textbf{Instructions}
+\begin{enumerate}
+\item \textit{Read every question very carefully.}
+\item \textit{You should be able to finish this exam in an hour.}
+\item \textit{For descriptive questions, please complete the answer in 5-10 sentences.}
+\item \textit{Please try to submit soft copies. If you are planning to submit scanned copies of hand-written answers, please make sure they are very clear.}
+\item \textit{Please join all the scanned copies or images to one PDF file and upload that final file to D2L.}
+\item \textit{Total points for the exam is \numpoints.}
+\item \textit{\bf{Late submissions minus 10 points.}}
+\end{enumerate}
+
+\begin{center}
+Grade Table (for teacher use only)\\
+\addpoints
+\gradetable[v][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\newpage
+\begin{questions}
+
+\question[20] Explain the skeleton of a simple GPU program (assume the program is a simple vector addtion).  
+\addpoints
+
+\question[20] 
+Explain the following:
+\noaddpoints % to omit double points count
+\begin{parts}
+\part[10] ACID properties
+\part[10] CAP theorem 
+\end{parts}
+\addpoints
+
+
+\question [20] 
+Explain the following terms in the context of Internet
+\noaddpoints 
+\begin{parts}
+\part[5] IP address
+\part[5] Application protocol
+\part[5] Transmission Control Protocol (TCP)
+\part[5] Internet Protocol (IP)
+\end{parts}
+\addpoints
+
+
+\question[20] From the Table 1, Which computer (System A or System B) will you buy (assume they have the same price) and give reasons for your decision.
+\addpoints
+\begin{table}[h]
+\centering
+\label{tbl}
+\begin{tabular}{l|l|l|l}
+ Program& Execution frequency &  Execution time (A) & Execution time (B)  \\\hline \hline
+ Vector addition & 50\% & 50 & 50   \\
+ Matrix multiplication&   30\%  & 250  & 300  \\
+ Matrix transpose & 20\% & 100 & 80 \\\hline 
+\end{tabular}
+\caption{Benchmark program execution time comparison of System A and System B}
+\end{table}
+
+\question[20] Name and explain the four different approaches of CPU scheduling.  
+\addpoints
+
+\end{questions}
+
+\end{document}
+

@@ -1,0 +1,412 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{listings}
+\newcommand{\class}{Programming Principles I}
+\newcommand{\term}{Fall 2017}
+\newcommand{\examnum}{Exam 1}
+\newcommand{\examdate}{09/12/2017}
+\newcommand{\timelimit}{120 Minutes}
+\usepackage{color}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  moredelim=[il][\textcolor{pgrey}]{$$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name:} & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\textbf{Time Limit: \timelimit} & Instructor: \textbf{Dr. Ferosh Jacob} & 
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+\begin{itemize}
+\item Please read the questions very carefully.
+    \item This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions with total  points  \numpoints. 
+\item Try to attempt as many as possible. However, the maximum score you can reach is 100.
+\item Good luck!
+\end{itemize}
+
+\begin{center}
+Grade Table (for teacher use only)\\
+\addpoints
+\gradetable[v][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+\question[5]  Explain the concept of computer program from Chapter 1.
+\makeemptybox{2in}
+\addpoints
+
+\question[5] Name and explain the three error types and give one example of each type you may encounter when writing a Java program
+\makeemptybox{2in}
+\addpoints
+
+\question[5] Explain the ``Reserved Words'' in Java.
+
+\makeemptybox{2in}
+\addpoints
+
+%\newpage
+\question[5] Explain the term ``High-Level Languages.''
+
+\makeemptybox{2in}
+\addpoints
+
+
+\question[5] Explain the term ``Operating System.''
+
+\makeemptybox{2in}
+\addpoints
+
+
+\question[5] List three editions of Java Development Kit (JDK)
+
+\begin{enumerate}
+    \item 
+    \item
+    \item
+\end{enumerate}
+\addpoints
+
+\question[5] Explain the terms ``Syntax rules'' and ``Semantics''
+
+\makeemptybox{2in}
+\addpoints
+
+\question[5] List the eight Java primitive data types
+
+\begin{enumerate}
+    \item 
+    \item
+    \item
+    \item
+    \item
+    \item
+    \item 
+    \item
+\end{enumerate}
+\addpoints
+
+\question[5]. Explain the difference between \texttt{float} type and \texttt{double} type.
+
+\makeemptybox{2in}
+\addpoints
+
+\question[5]. Show in details how Java would evaluate the following expression and show the order of operations:
+
+$X = 100 – (40 + (200 / (10 - 5) * 2) / 4) + 50$
+
+\makeemptybox{2in}
+\addpoints
+%\newpage
+\question . Write Java code (correct syntax) for each of the following requirements. Do not write complete programs, just what is required for each part. 
+
+\begin{parts}
+\part[4] Declare two integer variables (called A and B); initialize A to 20 and B to 40; assign the sum of A and B to K.
+\makeemptybox{2in}
+
+\part[4] Declare two integer variables (called V and W); initialize V to 50;  to assign $V^2$ to W;  then  printout the square of V with this label:
+
+
+\texttt{ The Square  of N = 2500 }
+
+\makeemptybox{2in}
+\part[4] Declare a variable of type double (call it \texttt{input}) and initialize it to $123.45$; then change its value by dividing it by $5$; finally assign the value of  variable $input$ to another integer variable (call it $int\_value$) using explicit type casting. Make sure all variables are declared.
+
+
+\makeemptybox{2in}
+\part[4] Declare a boolean variable (call it \texttt{flag}) and initialize it to {false}; then assign the expression $‘A’ < ‘a’$  to variable $flag$; and finally print out the value of  variable flag with this label   
+
+\texttt{Flag =}
+\makeemptybox{2in}
+
+\part[4]
+Assume you have a scanner object (called \texttt{input}). Declare an integer variable (call it \texttt{value}); initialize the variable with an input from the user; check if the variable (\texttt{value})is even or not; finally, print proper message such as ``value is even'' or ``value is odd''.
+\makeemptybox{2in}
+
+%\newpage
+\part[4] Create a scanner object (called \texttt{scan}). Declare a string variable (call it \texttt{name}); initialize the variable with an input from the user; finally, display the value of variable \texttt{name} on the screen with proper label such as
+
+\texttt{The name is Edward.}
+\makeemptybox{2in}
+\end{parts}
+\addpoints
+
+\question  Evaluate each of the following Java code write the exact output. Show all spaces and tabs properly in the outputs.
+\begin{parts}
+\part[2]  Code:
+\begin{lstlisting}
+boolean flag = false;
+boolean output = flag ^ true;
+System.out.println("Output = " + output);
+\end{lstlisting}
+\makeemptybox{0.5in}
+
+
+\part[2]  Code:
+\begin{lstlisting}
+System.out.println("Your points is \n\t" + 21 + 21);  
+\end{lstlisting}
+\makeemptybox{0.5in}
+
+\part[2]  Code:
+\begin{lstlisting}
+double a = (int) (50.0 / 10.0);
+System.out.println("Answer a = " + a);\end{lstlisting}
+\makeemptybox{0.5in}
+
+%\newpage
+\part[2]  Code:
+\begin{lstlisting}
+System.out.println("Output = \t\t" + (10+20));
+\end{lstlisting}
+\makeemptybox{0.5in}
+
+
+\part[2]  Code:
+\begin{lstlisting}
+int b = 28/2%4;
+System.out.println("Answer is b = " + b);
+\end{lstlisting}
+\makeemptybox{0.5in}
+\end{parts}
+\addpoints
+
+\question  Write boolean expressions. 
+\begin{parts}
+\part[2] Write a boolean expression that evaluates to true if \texttt{age} is greater than 15 and less than 21.
+\makeemptybox{0.5in}
+\part[2] Write a boolean expression that evaluates to true if \texttt{weight} is greater than or equal to 50 pounds or \texttt{height} is greater than 60 inches.
+\makeemptybox{0.5in}
+\part[2] Write a boolean expression that evaluates to true if \texttt{speed} is greater than or equal to 80 miles and  \texttt{distance} is less than or equal to 100 miles.
+\makeemptybox{0.5in}
+\end{parts}
+\addpoints
+
+\question What is the output of the following code segment?
+\begin{parts}
+\part[5] Code:
+\begin{lstlisting}
+int N = 30;
+if (N % 2 == 0)
+    System.out.println(N + " is Even");
+if (N % 5 == 0)
+    System.out.println(N + " is multiple of 5");
+if (N % 2 == 0)
+    System.out.println(N + " is Even");
+else if (N % 5 == 0)
+    System.out.println(N + " is multiple of 5");
+\end{lstlisting}
+\makeemptybox{1in}
+
+\part[5] Code:
+\begin{lstlisting}
+int x=2, y=3, z=4;
+System.out.println("(x<y && y<z) is " + (x<y && y<z));
+System.out.println("(x<y || y<z) is " + (x<y || y<z));
+System.out.println("!(x < y) is " + !(x < y));
+System.out.println("(x + y < z) is " + (x + y < z));
+System.out.println("(x + y > z) is " + (x + y > z));  
+\end{lstlisting}
+\makeemptybox{1in}
+
+\part[5] Trace and print out the exact output of the following Java code.
+
+\begin{lstlisting}
+boolean flag1 = true;
+boolean flag2 = true;
+int count = 0; 
+
+if ((flag1 && false) || (!flag2))
+    count = count + 10;
+if ((flag1 || false) && (flag1))
+    count = count + 30;
+if (flag1 && flag2 && true)
+    count = count + 20;
+if ((!flag1 || true) && false)
+    count = count + 10;
+if ((true && flag2) || (!flag1)
+    count = count + 10;
+
+System.out.println("The variable count is " + count);
+\end{lstlisting}
+\makeemptybox{0.5in}
+
+\part[5] Trace and print out the exact output of the following Java code.
+
+\begin{lstlisting}
+import java.util.Scanner;
+public class T1_Q11
+{
+   public static void main (String[] args)
+   {
+      int limit = 100, num1 = 15, num2 = 40;
+      if (limit > num1)
+         System.out.println("lemon");
+      else
+         System.out.println("grape");
+      System.out.println("lime");
+      System.out.println("lime");
+      if (limit <= limit)
+      {
+         if (num1 == num2)
+         {
+            System.out.println("lemon juice");
+         }
+         System.out.println("lime juice");
+      }
+      else System.out.println("grape");
+      System.out.println("lemon"); 
+\end{lstlisting}
+\makeemptybox{1in}
+\end{parts}
+\addpoints
+\question[10] Complete the following Java program to perform the tasks indicated in the in-line comments below.
+\begin{lstlisting}
+import java.util.Scanner;
+public class T1_Q12
+{
+  public static void main (String[] args)
+  {
+     int quantity;
+     double unitPrice, totalCost;
+     Scanner scan = new Scanner (System.in);
+     
+     //prompt the user to enter quantity and read it into the proper variable 
+     
+     
+
+     
+     //prompt the user to enter unit price and read it into the proper variable
+
+
+
+
+     //Compute the total cost
+
+
+
+     // printout all variables with proper labels and lineup the outputs using tabs
+    
+    
+    
+    
+    
+    }
+}
+
+\end{lstlisting}
+\addpoints
+%\question[2] One of these things is not like the others; one of these
+%things is not the same. Which one is different?
+%\begin{choices}
+%\choice John
+%choice Paul
+%\choice George
+%\choice Ringo
+%\choice Socrates
+%\end{choices}
+
+%\question[2] One of these things is not like the others; one of these
+%things is not the same. Which one is different?
+%\begin{oneparchoices}
+%\choice John
+%\choice Paul
+%\choice George
+%\choice Ringo
+%\choice Socrates
+%\end{oneparchoices}
+
+%\question[3] Mark box if true.
+%\addpoints
+%\begin{checkboxes}
+%\choice 2+2=4
+%\choice $\frac{d}{dx} (x^2+1) = 2x+1$
+%\choice The Moon is made of cheese.
+%\end{checkboxes}
+
+%{%
+%\checkboxchar{$\Box$} % changing checkbox style locally
+%\question[3] Mark box if true.
+%\addpoints
+%\begin{checkboxes}
+%\choice 2+2=4
+%\choice $\frac{d}{dx} (x^2+1) = 2x+1$
+%\choice The Moon is made of cheese.
+%\end{checkboxes}
+%}%
+
+%{%
+%% changing choice items style locally
+%\renewcommand*\thechoice{\arabic{choice}} 
+%\renewcommand*\choicelabel{\thechoice)}
+%
+%\question[2] Element with $Z=92$ is:
+%\begin{multicols}{2}
+%\begin{choices}
+%\choice H
+%\choice O
+%\choice F
+%\choice S
+%\choice Ba
+%\choice Pb
+%\choice U
+%\choice Pu
+%\end{choices}
+%\end{multicols}
+%}%
+
+%\question[10]
+%In no more than one paragraph, explain why the earth is round.
+%\makeemptybox{2in}
+
+%\question[20]
+%Explain blah, blah\ldots
+%\makeemptybox{\fill}
+
+%\newpage
+
+%\question[20]
+%Explain blah, blah\ldots
+%\fillwithlines{\fill}
+
+%\newpage
+
+%\question[20]
+%Explain blah, blah\ldots
+%\fillwithdottedlines{8em}
+
+\end{questions}
+
+\end{document}
+

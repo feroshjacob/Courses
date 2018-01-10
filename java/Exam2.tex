@@ -1,0 +1,140 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{listings}
+\newcommand{\class}{Programming Principles I}
+\newcommand{\term}{Fall 2017}
+\newcommand{\examnum}{Exam 1}
+\newcommand{\examdate}{09/12/2017}
+\newcommand{\timelimit}{120 Minutes}
+\usepackage{color}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  moredelim=[il][\textcolor{pgrey}]{$$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name:} & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\textbf{Time Limit: \timelimit} & Instructor: \textbf{Dr. Ferosh Jacob} & 
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+\begin{itemize}
+\item Please read the questions very carefully.
+    \item This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions with total  points  \numpoints. 
+\item Try to attempt as many as possible. However, the maximum score you can reach is 100.
+\item Good luck!
+\end{itemize}
+
+\begin{center}
+Grade Table (for teacher use only)\\
+\addpoints
+\gradetable[v][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+\pagebreak
+\begin{questions}
+
+\section{Trace a code segment}
+\question[10] What is the exact output of the following code segment? 
+
+
+ Code:
+\begin{lstlisting}
+      for (int i=1;  i<=4;  i++)
+      {
+         for (int j=1; j<=4; j++)
+             System.out.print((j-i) + "\t");
+         System.out.println();
+      } 
+\end{lstlisting}
+\makeemptybox{2in}
+\addpoints
+
+
+\question[10] What is the exact output of the following code segment? 
+
+
+ Code:
+\begin{lstlisting}
+       for (int i=0; i<3; i=i+1)
+       {
+           for (int j=i*3; j<i*3+3; j=j+1)
+               System.out.print(i + ";  ");
+           System.out.println();
+       }
+\end{lstlisting}
+\makeemptybox{2in}
+\addpoints
+
+\question[10] What is the exact output of the following code segment? 
+
+
+ Code:
+\begin{lstlisting}
+      int counter; 
+      for (counter = 7; counter <= 16; counter = counter + 1)
+      { 
+         switch ((counter % 10))
+         {
+            case 0: System.out.print(", "); 
+               break;
+            case 1: System.out.print("OFTEN "); 
+               break;
+            case 2: System.out.print("NEVER "); 
+               break; 
+            case 3: System.out.print("DONE "); 
+               break;
+            case 4: System.out.print("VERY "); 
+               break;
+            case 5: System.out.print("WELL "); 
+               break;
+            case 6: System.out.print("."); 
+               break;
+            case 7: System.out.print("WHAT "); 
+               break;
+            case 8: System.out.print("IS "); 
+               break;
+            case 9: System.out.print("DONE"); 
+               break;
+            default: System.out.print("Bad Number. ");
+         } 
+      }
+      System.out.println();
+
+\end{lstlisting}
+\makeemptybox{0.5in}
+\addpoints
+
+\end{questions}
+
+\end{document}
+

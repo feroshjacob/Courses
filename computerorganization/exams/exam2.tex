@@ -1,0 +1,91 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{listings}
+
+\newcommand{\class}{Advanced Computer Architecture }
+\newcommand{\term}{Summer 2017}
+\newcommand{\examnum}{Exam 2}
+\newcommand{\examdate}{07/06/2017}
+\newcommand{\timelimit}{1 day}
+%\newcommand{\numquestions}{5}
+%\newcommand{\numpoints}{100}
+%\newcommand{\numpages}{2}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions.\\
+
+\textbf{Instructions}
+\begin{enumerate}
+\item \textit{Read every question very carefully.}
+\item \textit{You should be able to finish this exam in an hour.}
+\item \textit{For descriptive questions, please complete the answer in 5-10 sentences.}
+\item \textit{Please try to submit soft copies. If you are planning to submit scanned copies of hand-written answers, please make sure they are very clear.}
+\item \textit{Please join all the scanned copies or images to one PDF file and upload that final file to D2L.}
+\item \textit{Total points for the exam is \numpoints.}
+\item \textit{\bf{Late submissions minus 10 points.}}
+\end{enumerate}
+
+\begin{center}
+Grade Table (for teacher use only)\\
+\addpoints
+\gradetable[v][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\newpage
+\begin{questions}
+
+\question[20] Explain the terms throughput and latency. 
+\addpoints
+
+\question[20] 
+Explain using Amdahl's Law  how we can possibly improve the overall performance of a computer  cheaper by buying better memory than buying better processor. 
+\addpoints
+
+\question [20] Explain the step-by-step diagram of the following actions in a RAID Level 5 (assume there are only 3 discs). 
+\noaddpoints % to omit double points count
+\begin{parts}
+\part[10] How data is added to the discs?
+\part[10] How the data is recovered in case of a disc failure? 
+\end{parts}
+\addpoints
+
+
+\question [20] 
+Describe the six phases of a compiler in translating a computer language to a machine language. 
+\addpoints
+
+\question [5] Draw example architecture diagrams for the following systems.
+\noaddpoints 
+\begin{parts}
+\part[5] SMP, Symmetric multiprocessors
+\part[5] MPP, Massively parallel processors
+\part[5] Hybrid of MPP and SMP
+\part[5] Extended Flynn's taxonomy.
+\end{parts}
+\addpoints
+\end{questions}
+
+\end{document}
+
